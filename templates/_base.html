@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Waev</title>
+
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='vendor/normalize.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='vendor/skeleton.css') }}>
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='everything.css') }}>
+
+    <script type="text/javascript" src={{ url_for('static', filename='vendor/jquery-3.3.1.min.js') }}></script>
+    <script type="text/javascript" src={{ url_for('static', filename='vendor/p5.min.js') }}></script>
+
+    {% block extraimports %}
+    {% endblock extraimports %}
+</head>
+<body>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>

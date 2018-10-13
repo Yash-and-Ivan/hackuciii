@@ -1,0 +1,58 @@
+.panel{
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    background-color: black;
+    z-index: 100;
+}
+.panel-1 {left: 0%; animation-name:    scroll-up; animation-duration: 2s; animation-delay: 2s; animation-fill-mode: forwards}
+.panel-2 {left: 20%; animation-name: scroll-down; animation-duration: 2s; animation-delay: 2s; animation-fill-mode: forwards}
+.panel-3 {left: 40%; animation-name:   scroll-up; animation-duration: 2s; animation-delay: 2s; animation-fill-mode: forwards}
+.panel-4 {left: 60%; animation-name: scroll-down; animation-duration: 2s; animation-delay: 2s; animation-fill-mode: forwards}
+.panel-5 {left: 80%; animation-name:   scroll-up; animation-duration: 2s; animation-delay: 2s; animation-fill-mode: forwards}
+
+@keyframes scroll-up {
+    0%{
+        top: 0;
+    }
+    100% {
+        top: -100%;
+    }
+}
+@keyframes scroll-down {
+    0%{
+        top: 0;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+input {
+    width: 50%;
+}
+button {
+    width: 30%;
+}
+#titleCard {
+    position: fixed;
+    top: 30%;
+    width: 40%;
+    left: 27%;
+    border: 2px solid black;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-left: 3%;
+    padding-right: 3%;
+}
+html {
+    overflow: hidden;
+}
+#img {
+    margin-top: 5%;
+    width: 40%;
+    opacity: 0.5;
+}

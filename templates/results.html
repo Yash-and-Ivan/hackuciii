@@ -1,0 +1,48 @@
+{% extends "_base.html" %}
+
+{% block extraimports %}
+    <link rel="stylesheet" type="text/css" href={{ url_for('static', filename='results.css') }}>
+    <script type="text/javascript" src={{ url_for('static', filename='results.js') }}></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+{% endblock extraimports %}
+
+{% block content %}
+<script>
+    var url = "{{ url }}";
+</script>
+<div class="container">
+    <div id="cover">
+        <br>
+    </div>
+    <br>
+    <h1 class="text-center">Results</h1>
+    <img src={{ url_for('static', filename='loading.gif') }} id="loading"/>
+    <hr>
+
+    <iframe src="http://www.youtube.com/embed/{{ url }}?enablejsapi=1"
+            id="yt-video" frameborder="0"></iframe>
+
+    <div class="spacer">
+        <br>
+    </div>
+</div>
+<div class="card-container">
+    <div class="card">
+        <h2 class="text-center">Summary</h2>
+        <p class="summary">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+    </div>
+    <div class="card">
+        <h2 class="text-center">Interactive Transcript</h2>
+        <p class="interactive-transcript">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </p>
+    </div>
+    <div class="card">
+        <h2 class="text-center">Analysis</h2>
+        <canvas id="analysis-chart" width="700px" height="500px"></canvas>
+    </div>
+</div>
+{% endblock content %}

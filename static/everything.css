@@ -1,0 +1,10 @@
+.text-center {
+    text-align: center;
+}
+.spacer-sm {height:10%;}
+.spacer-md {height:20%;}
+.spacer-lg {height:30%;}
+
+.red {
+    color: red;
+}
